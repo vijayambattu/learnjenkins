@@ -16,5 +16,12 @@ services:
       context: centos
     networks:
       - net
+  db-host:
+    container_name:db
+    image:mysql:9.2.0
+    environment:
+      - "MYSQL_ROOT_PASSWORD=1234"
+  volume:
+    - "$PWD/db_data:"   
 networks:
   net:
