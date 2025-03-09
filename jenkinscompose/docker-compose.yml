@@ -5,12 +5,12 @@ services:
     ports:
       - "8080:8080"
     volumes:
-      - $PWD/jenkins_home:/var/jenkins_home
+      - $PWD/jenkins_home:/var/jemkins_home
     networks:
       - net
-  remote-host:
-    container_name: remote-host
-    image: remote-host
+  centos:
+    container_name: remote-host-cnt
+    image: remote-host-img
     build:
       context: centos
     networks:
