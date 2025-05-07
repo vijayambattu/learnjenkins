@@ -2,3 +2,7 @@
 sudo usermod -aG docker $USER
 
 sudo chown -R $USER:$USER /path/to/your/files
+
+
+sudo chown 1000:1000 -R ~/jenkins-data 
+docker-compose up -d
